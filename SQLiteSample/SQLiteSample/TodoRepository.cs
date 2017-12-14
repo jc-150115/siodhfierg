@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace SQLiteSample
 {
-    class TodoRepository
+    class TodoRepository//
     {
 
         static readonly object Locker = new object(); // <-1
