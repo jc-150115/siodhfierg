@@ -18,6 +18,7 @@ namespace SQLiteSample
 
         public MyPage()
         {
+            TodoItem.Insert("スクワット");
 
             var listView = new ListView
             { // <-2
