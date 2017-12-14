@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace SQLiteSample
 {
-    public class App : Application
+    public partial class App : Application
     {
         public App()
         {
