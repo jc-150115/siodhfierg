@@ -28,7 +28,7 @@ namespace SQLiteSample
             listView.ItemTemplate.SetBinding(TextCell.DetailProperty, new Binding("CreatedAt", stringFormat: "{0:yyy/MM/dd hh:mm}"));
             listView.ItemTapped += async (s, a) => { // <-5
                 var item = (TodoItem)a.Item;
-                if (await DisplayAlert("削除してい宜しいですか", item.Text, "OK", "キャンセル"))
+                if (await DisplayAlert("削除して宜しいですか", item.Text, "OK", "キャンセル"))
                 {
                     item.Delete = true; // 削除フラグを有効にして
                     _db.SaveItem(item); // データベースの更新
@@ -42,8 +42,14 @@ namespace SQLiteSample
             var buttonAdd = new Button
             { // <-7
                 WidthRequest = 60,
-                TextColor = Color.White,
-                Text = "Add"
+                TextColor = Color.OrangeRed,
+                Text = "追加"
+            };
+            var buttonDelete = new Button
+            {
+                WidthRequest = 60,
+                TextColor = Color.Olive,
+                Text = "削除"
             };
             buttonAdd.Clicked += (s, a) => { // <-8
                 if (!String.IsNullOrEmpty(entry.Text))
@@ -63,7 +69,7 @@ namespace SQLiteSample
             BackgroundColor = Color.Navy, // 入力部の背景色はネイビー
             Padding = 5,
             Orientation = StackOrientation.Horizontal,
-            Children = {entry, buttonAdd} // Entryコントロールとボタンコントロールを横に並べる
+            Children = {entry, buttonAdd, buttonDelete} // Entryコントロールとボタンコントロールを横に並べる
           },
           listView // その下にリストボックスを置く
         }
