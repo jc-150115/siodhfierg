@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using SQLite.Net.Attributes;
 
 namespace SQLiteSample
@@ -12,4 +11,5 @@ namespace SQLiteSample
         public DateTime CreatedAt { get; set; } // <-3
         public bool Delete { get; set; }        // <-4
     }
+
 }
