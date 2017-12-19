@@ -13,7 +13,7 @@ namespace SQLiteSample
         {
             InitializeComponent();
 
-            TodoItem.InsertText("スクワット");
+            TodoItem.Insertname("スクワット");
         }
     }
 }
