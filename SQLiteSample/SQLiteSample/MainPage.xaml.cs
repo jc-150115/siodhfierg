@@ -12,6 +12,8 @@ namespace SQLiteSample
         public MainPage()
         {
             InitializeComponent();
+
+            TodoItem.InsertText("スクワット");
         }
     }
 }

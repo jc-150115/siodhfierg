@@ -18,7 +18,7 @@ namespace SQLiteSample
 
         public MyPage()
         {
-            TodoItem.Insert("スクワット");
+            TodoItem.InsertText("スクワット");
 
             var listView = new ListView
             { // <-2
@@ -60,6 +60,8 @@ namespace SQLiteSample
                     listView.ItemsSource = _db.GetItems(); //リスト更新
                     entry.Text = ""; // 入力コントロールをクリアする
                 }
+            
+            
             };
 
             Content = new StackLayout
